@@ -29,6 +29,7 @@ public class DymanicJson {
 	@DataProvider(name="BooksData")
 	public Object[][] BookProvid() {
 		return new Object[][] {{"pol","9878"},{"uop","9632"},{"loi","8458"}};
+		
 	}
 
 }
