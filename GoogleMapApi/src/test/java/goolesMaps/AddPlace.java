@@ -8,12 +8,13 @@ import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
 import files.Payload;
+import files.ReusableMethods;
 public class AddPlace {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RestAssured.baseURI="https://rahulshettyacademy.com";
-		 JsonPath js;
+		JsonPath js;
 		//AddPlace
 		String response=given().log().all().queryParam("key", "qaclick123").headers("Content-Type","application/json")
 		.body(Payload.Addplace())
@@ -21,7 +22,7 @@ public class AddPlace {
 		.then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP"))
 		.header("Server", equalTo("Apache/2.4.52 (Ubuntu)")).extract().response().asString();
 		
-		  js= new JsonPath(response);
+		 js= ReusableMethods.rowToJson(response);
 		 String PlaceId=js.getString("place_id");
 		 System.out.println(PlaceId);
 		 
@@ -41,7 +42,7 @@ public class AddPlace {
 		String getPlaceResponse= given().log().all().queryParam("key", "qaclick123").queryParam("place_id", PlaceId)
 		 .when().get("/maps/api/place/get/json")
 		 .then().log().all().assertThat().statusCode(200).extract().response().asString();
-		js= new JsonPath(getPlaceResponse);
+	    js= ReusableMethods.rowToJson(getPlaceResponse);
 		String ActualAdd=js.getString("address");
 		System.out.println(ActualAdd);
 		 assertEquals(NewAdd, ActualAdd);
