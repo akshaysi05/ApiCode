@@ -21,6 +21,16 @@ public class AddPlace {
 		 JsonPath js= new JsonPath(response);
 		 String PlaceId=js.getString("place_id");
 		 System.out.println(PlaceId);
+		 
+		 given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+		 .body("{\r\n"
+		 		+ "\"place_id\":\""+PlaceId+"\",\r\n"
+		 		+ "\"address\":\"Naurangpura police station Ahmedabad\",\r\n"
+		 		+ "\"key\":\"qaclick123\"\r\n"
+		 		+ "}\r\n"
+		 		+ "")
+		 .when().put("/maps/api/place/update/json")
+		 .then().log().all().assertThat().statusCode(200).body("msg", equalTo("Address successfully updated"));
 
 	}
 
