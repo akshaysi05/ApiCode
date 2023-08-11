@@ -37,7 +37,7 @@ public  class LoginIQT {
 		String keys=js.get("Availibilities[0].Availibility[0].FlightKey").toString();
 		System.out.println(keys);
 	}
-	//@Test
+	@Test
 	public void twoWayAvailibity() {
 		String Avaitwo=given().header("Content-Type","application/json").body(PayLoad.twoWayPay(SessionId))
 				.when().post("Availability")
