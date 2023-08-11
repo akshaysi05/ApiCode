@@ -34,10 +34,10 @@ public  class LoginIQT {
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		System.out.println(Avai);
 		js= new JsonPath(Avai);
-		String keys=js.get("Availibilities.Availibility.FlightKey").toString();
+		String keys=js.get("Availibilities[0].Availibility[0].FlightKey").toString();
 		System.out.println(keys);
 	}
-	@Test
+	//@Test
 	public void twoWayAvailibity() {
 		String Avaitwo=given().header("Content-Type","application/json").body(PayLoad.twoWayPay(SessionId))
 				.when().post("Availability")

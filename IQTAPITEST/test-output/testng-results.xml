@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-11T13:25:16 IST" name="Default suite" finished-at="2023-08-11T13:25:27 IST" duration-ms="10990">
+  <suite started-at="2023-08-11T14:25:33 IST" name="Default suite" finished-at="2023-08-11T14:25:40 IST" duration-ms="6961">
     <groups>
     </groups>
-    <test started-at="2023-08-11T13:25:16 IST" name="Default test" finished-at="2023-08-11T13:25:27 IST" duration-ms="10990">
+    <test started-at="2023-08-11T14:25:33 IST" name="Default test" finished-at="2023-08-11T14:25:40 IST" duration-ms="6961">
       <class name="TestIQT.LoginIQT">
-        <test-method signature="LoginTest()[pri:0, instance:TestIQT.LoginIQT@1a18644]" started-at="2023-08-11T13:25:16 IST" name="LoginTest" finished-at="2023-08-11T13:25:19 IST" duration-ms="2787" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:TestIQT.LoginIQT@1a18644]" started-at="2023-08-11T14:25:33 IST" name="LoginTest" finished-at="2023-08-11T14:25:36 IST" duration-ms="2648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method signature="oneWayAvailibity()[pri:0, instance:TestIQT.LoginIQT@1a18644]" started-at="2023-08-11T13:25:19 IST" name="oneWayAvailibity" finished-at="2023-08-11T13:25:23 IST" duration-ms="4356" status="PASS">
+        <test-method signature="oneWayAvailibity()[pri:0, instance:TestIQT.LoginIQT@1a18644]" started-at="2023-08-11T14:25:36 IST" name="oneWayAvailibity" finished-at="2023-08-11T14:25:40 IST" duration-ms="4261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneWayAvailibity -->
-        <test-method signature="twoWayAvailibity()[pri:0, instance:TestIQT.LoginIQT@1a18644]" started-at="2023-08-11T13:25:23 IST" name="twoWayAvailibity" finished-at="2023-08-11T13:25:27 IST" duration-ms="3789" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- twoWayAvailibity -->
       </class> <!-- TestIQT.LoginIQT -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
