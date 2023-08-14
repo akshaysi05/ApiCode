@@ -1,16 +1,11 @@
 package TestIQT;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import files.PayLoad;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.*;
-
-import javax.sql.rowset.serial.SQLOutputImpl;
 
 public  class LoginIQT {
 	 static String SessionId;
