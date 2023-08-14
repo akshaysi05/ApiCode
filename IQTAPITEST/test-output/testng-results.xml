@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-14T11:39:33 IST" name="Default suite" finished-at="2023-08-14T11:39:50 IST" duration-ms="17878">
+  <suite started-at="2023-08-14T11:45:06 IST" name="Default suite" finished-at="2023-08-14T11:45:23 IST" duration-ms="17037">
     <groups>
     </groups>
-    <test started-at="2023-08-14T11:39:33 IST" name="Default test" finished-at="2023-08-14T11:39:50 IST" duration-ms="17878">
+    <test started-at="2023-08-14T11:45:06 IST" name="Default test" finished-at="2023-08-14T11:45:23 IST" duration-ms="17037">
       <class name="TestIQT.TwoWayAvai">
-        <test-method is-config="true" signature="LoginTest()[pri:0, instance:TestIQT.TwoWayAvai@66f57048]" started-at="2023-08-14T11:39:33 IST" name="LoginTest" finished-at="2023-08-14T11:39:38 IST" duration-ms="5123" status="PASS">
+        <test-method is-config="true" signature="LoginTest()[pri:0, instance:TestIQT.TwoWayAvai@550dbc7a]" started-at="2023-08-14T11:45:06 IST" name="LoginTest" finished-at="2023-08-14T11:45:09 IST" duration-ms="2900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method signature="twoWayAvailibity()[pri:0, instance:TestIQT.TwoWayAvai@66f57048]" started-at="2023-08-14T11:39:38 IST" name="twoWayAvailibity" finished-at="2023-08-14T11:39:50 IST" duration-ms="12711" status="PASS">
+        <test-method signature="twoWayAvailibity()[pri:0, instance:TestIQT.TwoWayAvai@550dbc7a]" started-at="2023-08-14T11:45:09 IST" name="twoWayAvailibity" finished-at="2023-08-14T11:45:23 IST" duration-ms="14084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- twoWayAvailibity -->

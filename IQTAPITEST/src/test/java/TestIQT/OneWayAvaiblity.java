@@ -8,9 +8,7 @@ import files.PayLoad;
 import io.restassured.path.json.JsonPath;
 
 public class OneWayAvaiblity extends LoginIQT{
-	static JsonPath js;
 	static String  sessionId;
-	
 	@Test
 	public void oneWayAvailibity() {
 		 sessionId=LoginIQT.SessionId;
