@@ -29,7 +29,11 @@ public class PayLoad {
 				+ " {\r\n"
 				+ " \"Origin\": \"AMD\",\r\n"
 				+ " \"Destination\": \"DEL\",\r\n"
+<<<<<<< Updated upstream
 				+ " \"DepartDate\": \"12/09/2023\"\r\n"
+=======
+				+ " \"DepartDate\": \"15/08/2023\"\r\n"
+>>>>>>> Stashed changes
 				+ " }\r\n"
 				+ " ]\r\n"
 				+ "}";
