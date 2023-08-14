@@ -27,16 +27,13 @@ public class PayLoad {
 				+ " \"SessionID\": \""+SessionId+"\",\r\n"
 				+ " \"Segments\": [\r\n"
 				+ " {\r\n"
-				+ " \"Origin\": \"AMD\",\r\n"
-				+ " \"Destination\": \"DEL\",\r\n"
-<<<<<<< Updated upstream
-				+ " \"DepartDate\": \"12/09/2023\"\r\n"
-=======
+				+ " \"Origin\": \"DEL\",\r\n"
+				+ " \"Destination\": \"BOM\",\r\n"
 				+ " \"DepartDate\": \"15/08/2023\"\r\n"
->>>>>>> Stashed changes
 				+ " }\r\n"
 				+ " ]\r\n"
-				+ "}";
+				+ "}\r\n"
+				+ "";
 	}
 	public static String twoWayPay(String SessionId) {
 		
@@ -54,13 +51,13 @@ public class PayLoad {
 				+ " \"Segments\": [\r\n"
 				+ " {\r\n"
 				+ " \"Origin\": \"DEL\",\r\n"
-				+ " \"Destination\": \"AMD\",\r\n"
-				+ " \"DepartDate\": \"12/09/2023\"\r\n"
+				+ " \"Destination\": \"BOM\",\r\n"
+				+ " \"DepartDate\": \"15/08/2023\"\r\n"
 				+ " },\r\n"
 				+ "{\r\n"
-				+ " \"Origin\": \"AMD\",\r\n"
+				+ " \"Origin\": \"BOM\",\r\n"
 				+ " \"Destination\": \"DEL\",\r\n"
-				+ " \"DepartDate\": \"13/09/2023\"\r\n"
+				+ " \"DepartDate\": \"16/08/2023\"\r\n"
 				+ " }\r\n"
 				+ " ]\r\n"
 				+ "}";
