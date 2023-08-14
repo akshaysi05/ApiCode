@@ -2,14 +2,20 @@ package TestIQT;
 
 import static io.restassured.RestAssured.*;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import files.PayLoad;
 import io.restassured.path.json.JsonPath;
 
-public class OneWayAvaiblity extends LoginIQT{
-	@Test
-	public void oneWayAvailibity() {
+public   class  OneWayAvaiblity extends LoginIQT{
+	static String flightkeys;
+	static String Key;
+	static  String Provider;
+	static  String ItemNo;
+	static String pricingKey;
+	@BeforeTest
+	public static void oneWayAvailibity() {
 		 sessionId=LoginIQT.SessionId;
 		 System.out.println(sessionId);
 		System.out.println("AVALITY Check");
@@ -18,15 +24,15 @@ public class OneWayAvaiblity extends LoginIQT{
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		System.out.println(Avai);
 		js= new JsonPath(Avai);
-		String flightkeys=js.get("Availibilities[0].Availibility[0].FlightKey").toString();
+		 flightkeys=js.get("Availibilities[0].Availibility[0].FlightKey").toString();
 		System.out.println("FlightKey:"+flightkeys);
-		String Key=js.getString("Key");
+		 Key=js.getString("Key");
 		System.out.println("Keys:"+Key);
-	 String Provider=js.getString("Availibilities[0].Availibility[0].Provider");
+	  Provider=js.getString("Availibilities[0].Availibility[0].Provider");
 	 System.out.println("Provider:"+Provider);
-	String ItemNo= js.getString("Availibilities[0].Availibility[0].ItemNo");
+	 ItemNo= js.getString("Availibilities[0].Availibility[0].ItemNo");
 	System.out.println("ItemNo:"+ItemNo);
-	String pricingKey=js.getString("Availibilities[0].Availibility[0].PricingInfos.PricingInfo[0].Pricingkey");
+	 pricingKey=js.getString("Availibilities[0].Availibility[0].PricingInfos.PricingInfo[0].Pricingkey");
 	System.out.println("PricingKey:"+pricingKey);
 	}
 

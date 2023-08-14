@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestIQT.TwoWayAvai">
+      <class name="TestIQT.Ticketing">
         <methods>
-          <include name="twoWayAvailibity"/>
+          <include name="addPassenser"/>
+          <include name="pricing"/>
+          <include name="ticket"/>
+          <include name="LoginTest"/>
+          <include name="oneWayAvailibity"/>
         </methods>
-      </class> <!-- TestIQT.TwoWayAvai -->
+      </class> <!-- TestIQT.Ticketing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
