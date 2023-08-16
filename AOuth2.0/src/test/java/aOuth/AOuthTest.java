@@ -1,17 +1,25 @@
 package aOuth;
 
 import static io.restassured.RestAssured.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import pojo.Api;
 import pojo.GetCourse;
+import pojo.WebAutomation;
 
 public class AOuthTest {
 
@@ -27,8 +35,8 @@ public class AOuthTest {
 //		driver.findElement(By.cssSelector("input[name='Passwd']")).sendKeys("nbl_proex");
 //		driver.findElement(By.cssSelector("input[name='Passwd']")).sendKeys(Keys.ENTER);
 //		Thread.sleep(4000);
-		
-		String url="https://rahulshettyacademy.com/getCourse.php?state=jhar&code=4%2F0Adeu5BWeG4d9s0Bw6S7vBz-9Z6CSn5ulYV05HubGagbdoqGnWFjeFBV-7ER_KQ9ZLHIBIw&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
+		String[] courcesTitle= {"Selenium Webdriver Java","Cypress","Protractor"};
+		String url="https://rahulshettyacademy.com/getCourse.php?state=jhar&code=4%2F0Adeu5BUdl5KLRZHh6bIKHUqB_2qVzKE2ObXRN8j7tlrhtgy5FZMrHkQqyEX4MxOloZ_tDg&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
 		String Code=url.split("code=")[1].split("&scope")[0];
 		System.out.println(Code);
 		
@@ -48,6 +56,27 @@ public class AOuthTest {
 		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
 		  System.out.println(gc.getLinkedIn());
 		  System.out.println(gc.getInstructor());
+		  
+		  //Print Api Course Price According To Title 
+		  
+		 List<Api> apicouce= gc.getCourses().getApi();
+		 for(int i=0;i<apicouce.size();i++) {
+			 if(apicouce.get(i).getCourseTitle().equalsIgnoreCase("SoapUI Webservices testing")){
+				System.out.println( apicouce.get(i).getPrice());
+			 }
+			 
+		 }
+		 //And Compare Your Array With Find Array
+		 ArrayList<String> a= new ArrayList<String>();
+		 //print all the title of WebAutomation courses along with price
+		 List<WebAutomation> webAutomationcourse= gc.getCourses().getWebAutomation();
+		 for(int i=0;i<webAutomationcourse.size();i++) {
+			 a.add(webAutomationcourse.get(i).getCourseTitle());
+			System.out.println( webAutomationcourse.get(i).getCourseTitle());
+			System.out.println( webAutomationcourse.get(i).getPrice());
+		 }
+		List<String> ExpectedCouses= Arrays.asList(courcesTitle);
+		 assertTrue(a.equals(ExpectedCouses));
 
 	}
 
