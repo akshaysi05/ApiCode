@@ -7,8 +7,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import pojo.GetCourse;
 
 public class AOuthTest {
 
@@ -25,7 +28,7 @@ public class AOuthTest {
 //		driver.findElement(By.cssSelector("input[name='Passwd']")).sendKeys(Keys.ENTER);
 //		Thread.sleep(4000);
 		
-		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0Adeu5BU2at-W-nL5AHGq23uu8umSXxiXBmc6_y6EtOn-1_R7v5Lnszpr_gf6CLlA6LD9kw&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none";
+		String url="https://rahulshettyacademy.com/getCourse.php?state=jhar&code=4%2F0Adeu5BWeG4d9s0Bw6S7vBz-9Z6CSn5ulYV05HubGagbdoqGnWFjeFBV-7ER_KQ9ZLHIBIw&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
 		String Code=url.split("code=")[1].split("&scope")[0];
 		System.out.println(Code);
 		
@@ -40,9 +43,11 @@ public class AOuthTest {
 		String AccessToken = js.getString("access_token");
 		
         //GetActualResults
-		String ActualRest = given().queryParam("access_token", AccessToken).when().log().all()
-				.post("https://rahulshettyacademy.com/getCourse.php").asString();
-		System.out.println(ActualRest);
+		GetCourse gc = given().queryParam("access_token", AccessToken).expect().defaultParser(Parser.JSON)
+		.when()
+		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
+		  System.out.println(gc.getLinkedIn());
+		  System.out.println(gc.getInstructor());
 
 	}
 
