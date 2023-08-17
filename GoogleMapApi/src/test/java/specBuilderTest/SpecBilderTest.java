@@ -4,7 +4,6 @@ import static io.restassured.RestAssured.given;
 
 import java.util.List;
 import java.util.ArrayList;
-import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
