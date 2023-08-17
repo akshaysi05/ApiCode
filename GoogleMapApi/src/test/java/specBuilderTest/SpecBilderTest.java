@@ -47,6 +47,7 @@ public class SpecBilderTest {
 				.then().spec(ResponseSpec).extract()
 				.response();
 
+		
 		String responseString = res.asString();
 		System.out.println(responseString);
 
