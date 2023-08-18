@@ -3,6 +3,7 @@ package endToEndCommTest;
 import static io.restassured.RestAssured.*;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -13,7 +14,7 @@ import pojo.LoginResponse;
 public class EcomApiTest {
 	  static  String tokens;
 	  static String userid;
-	 @BeforeTest
+	  @Test (priority = 1)
 	public  void Login() {
 		// TODO Auto-generated method stub
 		RequestSpecification reqEcomm = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com/api/ecom")

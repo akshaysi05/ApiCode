@@ -16,9 +16,10 @@ import pojo.OrderProd;
 import pojo.OrderRequest;
 
 public class OrderProduct extends Createproduct {
-
-	@BeforeTest
+	static String orderesId;
+	  @Test (priority = 3)
 	public void OderProducts() {
+		
 		String Tokens = tokens;
 		String UserId = userid;
 		String productid = ProductId;
@@ -42,7 +43,7 @@ public class OrderProduct extends Createproduct {
 		String ordered = orderItems.when().post("/order/create-order").then().log().all().extract().response()
 				.asString();
 		JsonPath js = new JsonPath(ordered);
-		String orderesId = js.get("orders").toString();
+		 orderesId = js.get("orders[0]").toString();
 		System.out.println(orderesId);
 
 	}

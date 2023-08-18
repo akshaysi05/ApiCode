@@ -1,5 +1,6 @@
 package endToEndCommTest;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import io.restassured.builder.RequestSpecBuilder;
@@ -8,7 +9,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
 public class DeleteProduct extends OrderProduct{
-	@Test
+	  @Test (priority = 4)
 	public void deleteProduct() {
 		String Tokens = tokens;
 		String productid = ProductId;
@@ -21,7 +22,7 @@ public class DeleteProduct extends OrderProduct{
 	.then().log().all().extract().response().asString();
 	JsonPath js= new JsonPath(deleteResponse);
 	String Message=js.get("message");
-	System.out.println(Message );
+	System.out.println("DeletedProductMessages :"+Message );
 	}
 
 }

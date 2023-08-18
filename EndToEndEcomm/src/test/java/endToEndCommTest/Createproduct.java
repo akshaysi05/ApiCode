@@ -13,7 +13,7 @@ import pojo.ProdductResponse;
 
 public class Createproduct extends EcomApiTest {
 	static String  ProductId;
-	 @BeforeTest
+	  @Test (priority = 2)
 	public  void CreateItems () {
 		String Tokens= tokens;
 		String UserId=userid;

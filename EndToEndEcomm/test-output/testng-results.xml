@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-18T15:02:54 IST" name="Default suite" finished-at="2023-08-18T15:02:59 IST" duration-ms="4583">
+  <suite started-at="2023-08-18T16:19:02 IST" name="Suite" finished-at="2023-08-18T16:19:06 IST" duration-ms="3853">
     <groups>
     </groups>
-    <test started-at="2023-08-18T15:02:54 IST" name="Default test" finished-at="2023-08-18T15:02:59 IST" duration-ms="4583">
-      <class name="endToEndCommTest.DeleteProduct">
-        <test-method is-config="true" signature="Login()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:54 IST" name="Login" finished-at="2023-08-18T15:02:57 IST" duration-ms="3209" status="PASS">
+    <test started-at="2023-08-18T16:19:02 IST" name="Test" finished-at="2023-08-18T16:19:06 IST" duration-ms="3853">
+      <class name="endToEndCommTest.OrderDelete">
+        <test-method signature="Login()[pri:1, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:02 IST" name="Login" finished-at="2023-08-18T16:19:04 IST" duration-ms="2501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="CreateItems()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:57 IST" name="CreateItems" finished-at="2023-08-18T15:02:58 IST" depends-on-methods="endToEndCommTest.EcomApiTest.Login" duration-ms="346" status="PASS">
+        <test-method signature="CreateItems()[pri:2, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:04 IST" name="CreateItems" finished-at="2023-08-18T16:19:05 IST" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateItems -->
-        <test-method is-config="true" signature="OderProducts()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:58 IST" name="OderProducts" finished-at="2023-08-18T15:02:59 IST" depends-on-methods="endToEndCommTest.Createproduct.CreateItems, endToEndCommTest.EcomApiTest.Login" duration-ms="781" status="PASS">
+        <test-method signature="OderProducts()[pri:3, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:05 IST" name="OderProducts" finished-at="2023-08-18T16:19:05 IST" duration-ms="736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OderProducts -->
-        <test-method signature="deleteProduct()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:59 IST" name="deleteProduct" finished-at="2023-08-18T15:02:59 IST" duration-ms="196" status="PASS">
+        <test-method signature="deleteProduct()[pri:4, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:05 IST" name="deleteProduct" finished-at="2023-08-18T16:19:05 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteProduct -->
-      </class> <!-- endToEndCommTest.DeleteProduct -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method signature="orderView()[pri:5, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:05 IST" name="orderView" finished-at="2023-08-18T16:19:06 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderView -->
+        <test-method signature="deleteOrder()[pri:6, instance:endToEndCommTest.OrderDelete@55a147cc]" started-at="2023-08-18T16:19:06 IST" name="deleteOrder" finished-at="2023-08-18T16:19:06 IST" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteOrder -->
+      </class> <!-- endToEndCommTest.OrderDelete -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
