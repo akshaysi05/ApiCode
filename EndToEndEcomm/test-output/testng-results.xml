@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-18T15:02:54 IST" name="Default suite" finished-at="2023-08-18T15:02:59 IST" duration-ms="4583">
+    <groups>
+    </groups>
+    <test started-at="2023-08-18T15:02:54 IST" name="Default test" finished-at="2023-08-18T15:02:59 IST" duration-ms="4583">
+      <class name="endToEndCommTest.DeleteProduct">
+        <test-method is-config="true" signature="Login()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:54 IST" name="Login" finished-at="2023-08-18T15:02:57 IST" duration-ms="3209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="CreateItems()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:57 IST" name="CreateItems" finished-at="2023-08-18T15:02:58 IST" depends-on-methods="endToEndCommTest.EcomApiTest.Login" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateItems -->
+        <test-method is-config="true" signature="OderProducts()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:58 IST" name="OderProducts" finished-at="2023-08-18T15:02:59 IST" depends-on-methods="endToEndCommTest.Createproduct.CreateItems, endToEndCommTest.EcomApiTest.Login" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OderProducts -->
+        <test-method signature="deleteProduct()[pri:0, instance:endToEndCommTest.DeleteProduct@1c5920df]" started-at="2023-08-18T15:02:59 IST" name="deleteProduct" finished-at="2023-08-18T15:02:59 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProduct -->
+      </class> <!-- endToEndCommTest.DeleteProduct -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
