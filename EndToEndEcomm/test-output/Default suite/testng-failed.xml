@@ -6,6 +6,7 @@
       <class name="endToEndCommTest.OrderDelete">
         <methods>
           <include name="CreateItems"/>
+          <include name="deleteProduct"/>
           <include name="OderProducts"/>
           <include name="deleteOrder"/>
         </methods>
