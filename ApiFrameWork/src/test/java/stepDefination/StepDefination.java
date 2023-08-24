@@ -19,6 +19,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import pojo.AddPlacePaySeria;
 import pojo.Location;
+import resources.ApiResources;
 import resources.TestDataBuild;
 import resources.Utils;
 
@@ -37,9 +38,14 @@ public class StepDefination extends Utils{
 			// TODO Auto-generated catch block
 	}
 
-	@When("user calls {string} with Post http request")
-	public void user_calls_with_post_http_request(String string) {
-		 res = response.when().post("/maps/api/place/add/json").then().spec(ResponseSpec).extract().response();
+	@When("user calls {string} with {string} http request")
+	public void user_calls_with_http_request(String resource, String methods) {
+		ApiResources resourceAPI=ApiResources.valueOf(resource);
+		System.out.println( resourceAPI.getResource());
+		if(methods.equalsIgnoreCase("POST"))
+		 res = response.when().post(resourceAPI.getResource());
+		else if(methods.equalsIgnoreCase("GET"))
+			 res = response.when().get(resourceAPI.getResource());
 
 	}
 
