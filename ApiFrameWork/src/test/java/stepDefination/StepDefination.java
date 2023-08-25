@@ -27,6 +27,7 @@ public class StepDefination extends Utils{
 	ResponseSpecification ResponseSpec;
 	RequestSpecification response;
 	Response res;
+
 	TestDataBuild data= new TestDataBuild();
 	@Given("Add Place PayLoad with {string} {string} {string}")
 	public void add_place_pay_load_with(String name, String lang, String addres)  throws IOException {
@@ -58,10 +59,20 @@ public class StepDefination extends Utils{
 
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String ActualValue, String ExpectedValue) {
-		String resp=res.asString();
-		JsonPath js= new JsonPath(resp);
-	  assertEquals(js.getString(ActualValue), ExpectedValue);	
+		
+	  assertEquals(getJosnPath(res,ActualValue), ExpectedValue);	
 		
 	}
+	@Then("Verify place_Id created maps to {string} using {string}")
+	public void verify_place_id_created_maps_to_using(String expectedName, String resourceName) throws IOException {
+		String place_id=getJosnPath(res, "place_id");
+		
+		response = given().spec(requestSpecifinationData()).queryParam("place_id", place_id);
+		user_calls_with_http_request(resourceName,"GET");
+		String name=getJosnPath(res, "name");
+		assertEquals(name, expectedName);
+	    
+	}
+
 	
 }
