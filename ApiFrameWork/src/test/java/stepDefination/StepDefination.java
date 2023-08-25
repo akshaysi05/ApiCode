@@ -27,7 +27,7 @@ public class StepDefination extends Utils{
 	ResponseSpecification ResponseSpec;
 	RequestSpecification response;
 	Response res;
-
+	 static String place_id;
 	TestDataBuild data= new TestDataBuild();
 	@Given("Add Place PayLoad with {string} {string} {string}")
 	public void add_place_pay_load_with(String name, String lang, String addres)  throws IOException {
@@ -65,7 +65,7 @@ public class StepDefination extends Utils{
 	}
 	@Then("Verify place_Id created maps to {string} using {string}")
 	public void verify_place_id_created_maps_to_using(String expectedName, String resourceName) throws IOException {
-		String place_id=getJosnPath(res, "place_id");
+		 place_id=getJosnPath(res, "place_id");
 		
 		response = given().spec(requestSpecifinationData()).queryParam("place_id", place_id);
 		user_calls_with_http_request(resourceName,"GET");
@@ -73,6 +73,11 @@ public class StepDefination extends Utils{
 		assertEquals(name, expectedName);
 	    
 	}
+	@Given("DeletePlace Payload")
+	public void delete_place_payload() throws IOException {
+		response= given().spec(requestSpecifinationData()).body(data.deletePlacePayload(place_id));
+	}
+
 
 	
 }
