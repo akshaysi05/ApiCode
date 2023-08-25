@@ -12,11 +12,11 @@ Multiparts:		<none>
 Body:
 {
     "accuracy": 50,
-    "name": "herry",
+    "name": "Golu",
     "phone_number": "900000002",
-    "address": "<address >",
+    "address": "LawGarden",
     "website": "Akshay.singh,.com",
-    "language": "English",
+    "language": "Hindi",
     "location": {
         "lat": -38.383494,
         "lng": 33.427362
@@ -27,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Fri, 25 Aug 2023 08:18:44 GMT
+Date: Fri, 25 Aug 2023 08:37:02 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "622e678da1893e8863d98921fe37d0ca",
+    "place_id": "f3cc432a245171332d197741e86772a3",
     "scope": "APP",
-    "reference": "ec5557947d0fdf5f96d3b4acbda30883ec5557947d0fdf5f96d3b4acbda30883",
-    "id": "ec5557947d0fdf5f96d3b4acbda30883"
+    "reference": "48f827b9376369e68f96ecd7a3c7650648f827b9376369e68f96ecd7a3c76506",
+    "id": "48f827b9376369e68f96ecd7a3c76506"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=622e678da1893e8863d98921fe37d0ca
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=f3cc432a245171332d197741e86772a3
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=622e678da1893e8863d98921fe37d0ca
+				place_id=f3cc432a245171332d197741e86772a3
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,13 +59,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 25 Aug 2023 08:18:45 GMT
+Date: Fri, 25 Aug 2023 08:37:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 218
+Content-Length: 214
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -76,10 +76,40 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "33.427362"
     },
     "accuracy": "50",
-    "name": "herry",
+    "name": "Golu",
     "phone_number": "900000002",
-    "address": "<address >",
+    "address": "LawGarden",
     "types": "ShoePark,shop",
     "website": "Akshay.singh,.com",
-    "language": "English"
+    "language": "Hindi"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "f3cc432a245171332d197741e86772a3"
+}
+HTTP/1.1 200 OK
+Date: Fri, 25 Aug 2023 08:37:04 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
 }
