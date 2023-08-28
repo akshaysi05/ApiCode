@@ -12,7 +12,7 @@ Multiparts:		<none>
 Body:
 {
     "accuracy": 50,
-    "name": "Golu",
+    "name": "Ram",
     "phone_number": "900000002",
     "address": "LawGarden",
     "website": "Akshay.singh,.com",
@@ -27,7 +27,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Fri, 25 Aug 2023 09:09:14 GMT
+Date: Mon, 28 Aug 2023 05:49:09 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "d78f16367f184edc8b4fb3a6a0eaf6b2",
+    "place_id": "d256eecb28ff52c346f5b482fa110516",
     "scope": "APP",
-    "reference": "dd18c892c12682678b054bf8a86384cbdd18c892c12682678b054bf8a86384cb",
-    "id": "dd18c892c12682678b054bf8a86384cb"
+    "reference": "38d61b942028fbf82b51c6ea32dc9c0838d61b942028fbf82b51c6ea32dc9c08",
+    "id": "38d61b942028fbf82b51c6ea32dc9c08"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=d78f16367f184edc8b4fb3a6a0eaf6b2
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=d256eecb28ff52c346f5b482fa110516
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=d78f16367f184edc8b4fb3a6a0eaf6b2
+				place_id=d256eecb28ff52c346f5b482fa110516
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,13 +59,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 25 Aug 2023 09:09:15 GMT
+Date: Mon, 28 Aug 2023 05:49:09 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 214
+Content-Length: 213
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -76,40 +76,10 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "33.427362"
     },
     "accuracy": "50",
-    "name": "Golu",
+    "name": "Ram",
     "phone_number": "900000002",
     "address": "LawGarden",
     "types": "ShoePark,shop",
     "website": "Akshay.singh,.com",
     "language": "Hindi"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "d78f16367f184edc8b4fb3a6a0eaf6b2"
-}
-HTTP/1.1 200 OK
-Date: Fri, 25 Aug 2023 09:09:15 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
 }
