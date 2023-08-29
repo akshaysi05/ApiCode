@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import io.cucumber.java.Before;
 
+
+
 public class Hooks {
 	@Before("@DeletePlace")
 	public void beforeRunScenario() throws IOException {
