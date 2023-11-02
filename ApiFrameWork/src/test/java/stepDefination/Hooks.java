@@ -13,7 +13,7 @@ public class Hooks {
 		//write a code that will give you place_id
 		StepDefination sd= new StepDefination();
 		if(StepDefination.place_id==null) {
-		sd.add_place_pay_load_with("Ram", "Hindi", "LawGarden");
+		sd.add_place_pay_load_with(" jaiRam", "Hindu", "Garden");
 		sd.user_calls_with_http_request("AddPlaceAPI", "POST");
 		sd.verify_place_id_created_maps_to_using("Golu", "getPlaceApi");
 		}

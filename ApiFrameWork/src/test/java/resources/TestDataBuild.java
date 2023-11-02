@@ -13,15 +13,15 @@ public class TestDataBuild {
 		p.setLanguage(lang);
 		p.setAddress(addres);
 		p.setName(name);
-		p.setWebsite("Akshay.singh,.com");
-		p.setPhone_number("900000002");
+		p.setWebsite("Akshay.com");
+		p.setPhone_number("900000001");
 		List<String> myList = new ArrayList<String>();
-		myList.add("ShoePark");
-		myList.add("shop");
+		myList.add("Shoeark");
+		myList.add("sho");
 		p.setTypes(myList);
 		Location l = new Location();
-		l.setLat(-38.383494);
-		l.setLng(33.427362);
+		l.setLat(-39.383494);
+		l.setLng(34.427362);
 		p.setLocation(l);
 		return p;
 	}
